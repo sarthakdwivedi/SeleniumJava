@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="utilities.Listener"/>
+  </listeners>
+  <test thread-count="5" name="LoginTest(failed)" verbose="0">
+    <classes>
+      <class name="test.LoginTest">
+        <methods>
+          <include name="VerifyValidLogin"/>
+          <include name="VerifyErrorMessageOnInvalidCredentials"/>
+          <include name="setup"/>
+          <include name="goToLoginPage"/>
+          <include name="cleanup"/>
+          <include name="verifyErrorMessageOnBlank"/>
+        </methods>
+      </class> <!-- test.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+  <test thread-count="5" name="SearchTest(failed)" verbose="0">
+    <classes>
+      <class name="test.SearchTest">
+        <methods>
+          <include name="navigateToHomePage"/>
+          <include name="verifyErrorOnInvalidSearch"/>
+          <include name="verifyProductSearch"/>
+          <include name="setup"/>
+          <include name="verifyErrorOnBlankSearch"/>
+          <include name="cleanup"/>
+        </methods>
+      </class> <!-- test.SearchTest -->
+    </classes>
+  </test> <!-- SearchTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
